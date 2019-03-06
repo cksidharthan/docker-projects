@@ -2,12 +2,12 @@ Steps to use this dockerfile to run mongodb in your local docker machine
 ========================================================================
 
 1) Build image using the dockerfile
-`docker build -t <<RepositoryName>>/mongodb:<<TagName>> .`
-Eg. docker build -t sidharth/mongodb:0.0.1-SNAPSHOT
+    docker build -t <<RepositoryName>>/mongodb:<<TagName>> .
+    Eg. docker build -t sidharth/mongodb:0.0.1-SNAPSHOT
 
 2) Run the image
-`docker run -d -p 27017:27017 imageName:Tag`
-Eg. docker run -d -p 27017:27017 sidharth/mongodb:0.0.1-SNAPSHOT
+    docker run -d -p 27017:27017 imageName:Tag
+    Eg. docker run -d -p 27017:27017 sidharth/mongodb:0.0.1-SNAPSHOT
 
 3) Log into the running container
     Run 'docker ps -a' and check the container id
