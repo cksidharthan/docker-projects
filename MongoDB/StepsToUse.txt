@@ -1,0 +1,31 @@
+Steps to use this dockerfile to run mongodb in your local docker machine
+========================================================================
+
+1) Build image using the dockerfile
+`docker build -t <<RepositoryName>>/mongodb:<<TagName>> .`
+Eg. docker build -t sidharth/mongodb:0.0.1-SNAPSHOT
+
+2) Run the image
+`docker run -d -p 27017:27017 imageName:Tag`
+Eg. docker run -d -p 27017:27017 sidharth/mongodb:0.0.1-SNAPSHOT
+
+3) Log into the running container
+    Run 'docker ps -a' and check the container id
+    log into the container 'docker exec -ti <<container_id>> /bin/bash'
+
+4) Run the below mentioned commands
+    mongo
+    use admin
+    db.createUser({user: "mongo-admin", pwd: "password", roles:[{role: "userAdminAnyDatabase", db: "admin"}]})
+    quit()
+
+5) Now you can use your mongodb from mongo compass or any other tool
+    hostname: localhost
+    port: 27017
+    username: mongo-admin
+    password: password
+    db: admin
+
+Will make future upgrades to make this process simple :)
+
+For more questions, Mail me at csidharthank@gmail.com
