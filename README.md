@@ -1,4 +1,4 @@
 ## DOCKER IMAGES
-This repository contains below mentioned docker images
+This repository contains dockerfiles for below
 
 ### MongoDB - (centos)
