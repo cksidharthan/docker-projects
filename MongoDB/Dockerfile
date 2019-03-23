@@ -17,4 +17,4 @@ RUN yum update -y && \
     echo "  authorization: enabled" >> /etc/mongod.conf
 
 EXPOSE 27017
-ENTRYPOINT ["/usr/bin/mongod"]
+ENTRYPOINT ["/usr/bin/mongod --fork --logpath /var/log/mongodb.log"]
